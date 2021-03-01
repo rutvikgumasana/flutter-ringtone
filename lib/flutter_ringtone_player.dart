@@ -68,7 +68,10 @@ class FlutterRingtonePlayer {
           var args = <String, dynamic>{'name': parts[0], 'ext': parts[1]};
           _channel.invokeMethod('playCustom', args);
         }
-      } on PlatformException {}
+      } catch (e) {
+        print("EXCEPTION--------------------");
+        print(e);
+      }
     }
   }
 
